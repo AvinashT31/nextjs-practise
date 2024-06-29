@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 import { connectionstr } from "../../../../lib/db";
-import  User  from "@/app/Models/user";
+import User from "@/app/Models/user";
 
 
 export async function GET() {
@@ -33,3 +33,24 @@ export async function POST(request) {
     }
 
 }
+
+// export async function POST(request) {
+//     try {
+//         await mongoose.connect(connectionstr);
+
+//         const { _id } = await request.json();
+//         console.log(_id, "id heree")
+
+//         const finddata = await User.findById(_id);
+//         console.log(finddata, "finddata");
+
+//         if (!finddata) {
+//             return NextResponse.json({ status: 401, message: "data not found" })
+//         }
+
+//         return NextResponse.json({ status: 200, message: "data retrived successfully", finddata })
+//     } catch (error) {
+//         console.error("Error during user registration:", error);
+//         return NextResponse.json({ status: 500, message: "An error occurred during registration" });
+//     }
+// }
