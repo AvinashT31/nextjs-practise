@@ -1,23 +1,3 @@
-// import mongoose, { Schema } from "mongoose"
-
-// const UserSchema = new Schema({
-//     name: {
-//         type: "string",
-//         require: true
-//     }, number: {
-//         type: "string",
-//         require: true
-//     }, email: {
-//         type: "string",
-//         require: true
-//     }, password: {
-//         type: "string",
-//         require: true
-//     },
-// })
-
-// export default mongoose.model("User", UserSchema)
-
 import mongoose, { Schema } from 'mongoose';
 
 const UserSchema = new Schema({
@@ -32,7 +12,6 @@ const UserSchema = new Schema({
     email: {
         type: String,
         required: true,
-        unique: true
     },
     password: {
         type: String,
