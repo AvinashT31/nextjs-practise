@@ -24,8 +24,7 @@ export async function POST(request) {
                 email: email,
                 number: number,
                 password: password,
-            })
-            
+            })    
             console.log(newuser, "newuser")
             await newuser.save();
 
@@ -54,6 +53,5 @@ export async function POST(request) {
             return NextResponse.json({ status: 500, message: "An error occurred during registration" });
         }
     }
-
 }
 
